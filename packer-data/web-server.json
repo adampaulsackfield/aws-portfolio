@@ -22,14 +22,6 @@
     {
       "type": "shell",
       "inline": ["ls"]
-    },
-    {
-      "type": "shell",
-      "script": "./env/scripts/ansible.sh"
-    },
-    {
-      "type": "ansible-local",
-      "playbook_file": "./playbooks/nginx.yml"
     }
   ]
 }
