@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - curl -o packer.zip https://releases.hashicorp.com/packer/1.7.7/packer_1.7.7_linux_amd64.zip
+      - curl -qL -o packer.zip https://releases.hashicorp.com/packer/1.7.7/packer_1.7.7_linux_amd64.zip
       - unzip packer.zip
   build:
     commands:
