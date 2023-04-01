@@ -6,4 +6,4 @@ phases:
       - unzip -f packer.zip
   build:
     commands:
-      - packer build web-server.json
+      - packer build packer/web-server.json
