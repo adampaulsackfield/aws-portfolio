@@ -1,0 +1,31 @@
+{
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "vpc_id": "vpc-0c41b2b8326ffeeef",
+      "subnet_id": "subnet-0ad522616d1675207",
+      "associate_public_ip_address": "true",
+      "region": "eu-west-1",
+      "source_ami": "ami-0536352056b060629",
+      "instance_type": "t2.micro",
+      "ssh_username": "ubuntu",
+      "ami_name": "WebServer-AMI"
+    }
+  ],
+
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "env",
+      "destination": "/home/ubuntu/env"
+    },
+    {
+      "type": "shell",
+      "script": "./env/scripts/ansible.sh"
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "nginx.yml"
+    }
+  ]
+}
