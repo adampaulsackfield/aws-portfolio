@@ -4,6 +4,7 @@ phases:
     commands:
       - curl -qL -o packer.zip https://releases.hashicorp.com/packer/1.7.7/packer_1.7.7_linux_amd64.zip
       - unzip -f packer.zip
+      - sudo mv packer /usr/local/bin
   build:
     commands:
-      - ./packer build packer/web-server.json
+      - packer build packer/web-server.json
