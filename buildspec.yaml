@@ -7,4 +7,4 @@ phases:
       - sudo mv packer /usr/local/bin
   build:
     commands:
-      - packer build packer/web-server.json
+      - sudo packer build packer/web-server.json
