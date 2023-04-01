@@ -12,4 +12,4 @@ phases:
 
   build:
     commands:
-      - sudo packer build packer/web-server.json
+      - packer build packer/web-server.json
